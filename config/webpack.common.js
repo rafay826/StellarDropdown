@@ -37,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        include: helpers.root('src', 'app'),
+        include: helpers.root('src', 'modules'),
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap!sass?sourceMap')
       },
 //      {
@@ -47,7 +47,7 @@ module.exports = {
 //      },
       {
         test: /\.css$/,
-        include: helpers.root('src', 'app'),
+        include: helpers.root('src', 'modules'),
         loader: 'raw'
       }
     ]
