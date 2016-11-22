@@ -15,7 +15,7 @@ module.exports = {
   },
     
   output: {
-    path: helpers.root('build'),
+    path: helpers.root('dist'),
     publicPath: 'http://localhost:8080/',
     filename: '[name].js',
     chunkFilename: '[id].chunk.js'
@@ -33,13 +33,18 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file?name=assets/[name].[hash].[ext]'
+        loader: 'file?name=assets/[name].[ext]'
       },
       {
-        test: /\.css$/,
-        exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+        test: /\.scss$/,
+        include: helpers.root('src', 'app'),
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!sass?sourceMap')
       },
+//      {
+//        test: /\.scss$/,
+//        include: helpers.root('src', 'app'),
+//        loaders: ["style-loader", "css-loader", "sass-loader"]
+//      },
       {
         test: /\.css$/,
         include: helpers.root('src', 'app'),
