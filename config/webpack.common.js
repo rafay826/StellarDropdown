@@ -13,6 +13,13 @@ module.exports = {
   resolve: {
     extensions: ['', '.ts', '.js']
   },
+    
+  output: {
+    path: helpers.root('build'),
+    publicPath: 'http://localhost:8080/',
+    filename: '[name].js',
+    chunkFilename: '[id].chunk.js'
+  },
 
   module: {
     loaders: [
