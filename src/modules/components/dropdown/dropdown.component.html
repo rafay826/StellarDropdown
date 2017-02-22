@@ -1,0 +1,18 @@
+<div 
+	[ngClass]="{ 'extendHeight': toggleList }"
+	(click)="showDropDown()" 
+	class="dropdown-container" >
+<div class="header" >Color: {{ color }}</div>
+	<div 
+	class="list-container" 
+	[hidden]="!toggleList" >
+		<ul class="droplist" >
+			<li (click)="color = 'red' " >Red</li>
+			<li>Blue</li>
+			<li>Green</li>
+			<li>Yellow</li>
+			<li>Black</li>
+			<li>Purple</li>
+		</ul>
+	</div>
+</div>

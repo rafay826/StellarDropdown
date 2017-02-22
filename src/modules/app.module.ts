@@ -5,6 +5,7 @@ import { routing } from '../app.routing';
 
 import { AppComponent } from './components/home/app.component';
 import { AboutComponent } from './components/about/about.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component'
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { AboutComponent } from './components/about/about.component';
   ],
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    DropdownComponent
   ],
   bootstrap: [ AppComponent ]
 })
