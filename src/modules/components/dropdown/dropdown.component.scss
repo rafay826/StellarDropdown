@@ -1,3 +1,13 @@
+
+@keyframes rotateMe {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(90deg);
+	}
+}
+
 dropdown-comp {
 
 	.extendHeight {
@@ -10,10 +20,25 @@ dropdown-comp {
 		border: 1px solid #000000;
 		margin: 0 auto;
 		background-color: #333;
+
 		.header {
 			border-bottom: 1px solid #000;
 			height: 25px;
 		}
+
+		.arrow {
+			float: right;
+			margin-right: 10px;
+		}
+
+		.rotateMe {
+			animation: rotateMe 1s forwards;
+		}
+
+		.rotateback {
+			animation: rotateBack 1s forwards;
+		}
+
 		.list-container {
 			overflow: scroll;
 			height: 90px;

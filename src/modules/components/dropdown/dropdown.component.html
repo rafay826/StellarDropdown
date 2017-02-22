@@ -1,6 +1,11 @@
 <div 
 	[ngClass]="{ 'extendHeight': toggleList }"
 	class="dropdown-container" >
+	<i 
+		(click)="showDropDown()"
+		[ngClass]="{ 'rotateMe': toggleList }"
+		class=" arrow fa fa-angle-right" 
+		aria-hidden="true"></i>
 	<div 
 		(click)="showDropDown()" 
 		class="header" >Color: {{ color }}</div>
