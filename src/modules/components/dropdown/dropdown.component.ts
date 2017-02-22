@@ -13,6 +13,9 @@ export class DropdownComponent implements AfterViewInit {
 	toggleList: any
 	listHidden: any
 	showList: any
+	clearList: any
+
+	colorList: Array<string> = ['Red', 'Blue', 'Green', 'Yellow', 'Black', 'Purple']
 
 	constructor( private el: ElementRef ) {
 	}
@@ -21,10 +24,9 @@ export class DropdownComponent implements AfterViewInit {
 
 		this.showDropDown = () => {
 			this.toggleList = !this.toggleList
-			// if(this.toggleList = true) {
-			// 	this.el.nativeElement.querySelector('.dropdown-container').style.height = "115px"
-			// }
 		}
+
+
 	}
 
 }
